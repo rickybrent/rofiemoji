@@ -1,14 +1,15 @@
-#!/bin/sh
-
-VER='11.0'
-URL="https://www.unicode.org/Public/emoji/${VER}/emoji-test.txt"
+#!/usr/bin/env bash
+echo -en "\0markup-rows\x1ftrue\n"
+URL="https://raw.githubusercontent.com/Mange/rofi-emoji/master/all_emojis.txt"
 DIR="$HOME/.cache"
-FILE="$DIR/emojis.txt"
+FILE="$DIR/emojis.pango.txt"
 
 if [ ! -r $FILE ]
 then
   if [ ! -d $DIR ]; then mkdir $DIR; fi
-  curl $URL | grep -v '^#' | grep ' ; fully-qualified ' | cut -d'#' -f2 > $FILE
+  curl $URL | awk  \
+    'BEGIN { FS = "[\t]+" } ; {gsub("&[^a-zA-Z]", "\\&amp; "); print $1" <b>"$4"</b> <small>("$5") <small>["$2" / "$3"]</small></small>" }'\
+    > $FILE
 fi
 
 if [ "$@" ]
