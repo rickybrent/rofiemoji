@@ -1,8 +1,10 @@
 # Rofiemoji
 
-Inspired by https://github.com/fdw/rofimoji but written as rofi-script instead of starting a separate rofi.
+A small fork of https://github.com/nkoehring/rofiemoji that copies the formatting (and emoji list with with tags) from https://github.com/nkoehring/rofiemoji.
 
-It automatically downloads the list of emojis when used for the first time. To avoid that, simply place `emoji.txt` from this repository in `$HOME/.cache/` yourself. But don't worry too much, the download is pretty quick (~350kb text file).
+Compared to the former, you can type "grin" and get the beaming face, while compared to the later, it's a script instead of a C plugin.
+
+The list of emojis is automatically downloaded and formated when used for the first time. 
 
 ## Prerequisites
 
@@ -18,6 +20,6 @@ rofi -modi 'run,drun,emoji:/path/to/rofimoji/rofimoji.sh' -show emoji
 
 ## Screenshot
 
-![screenshot](https://raw.githubusercontent.com/nkoehring/rofiemoji/master/rofiemoji.jpg)
+![screenshot](https://raw.githubusercontent.com/rickybrent/rofiemoji/master/rofiemoji.jpg)
 
 
