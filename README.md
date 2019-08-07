@@ -1,6 +1,6 @@
 # Rofiemoji
 
-A small fork of https://github.com/nkoehring/rofiemoji that copies the formatting (and emoji list with with tags) from https://github.com/nkoehring/rofiemoji.
+A small fork of https://github.com/nkoehring/rofiemoji that copies the formatting (and emoji list with with tags) from https://github.com/mange/rofi-emoji.
 
 Compared to the former, you can type "grin" and get the beaming face, while compared to the later, it's a script instead of a C plugin.
 
